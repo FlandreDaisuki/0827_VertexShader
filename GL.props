@@ -5,7 +5,7 @@
   <PropertyGroup />
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Flandre\Documents\Visual Studio 2013\GL_Dependence\freeglut-MSVC-3.0.0-1.mp\freeglut\lib;C:\Users\Flandre\Documents\Visual Studio 2013\GL_Dependence\glew-1.12.0-win32\glew-1.12.0\lib;C:\Users\Flandre\Documents\Visual Studio 2013\GL_Dependence\glm-devernay-master;C:\Users\Flandre\Documents\Visual Studio 2013\GL_Dependence\glm-g-truc-master;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\GL_Dependence\glew-1.12.0-win32\glew-1.12.0\lib;..\GL_Dependence\freeglut-MSVC-3.0.0-1.mp\freeglut\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
