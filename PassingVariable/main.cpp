@@ -75,8 +75,8 @@ void display(void)
 	glGetFloatv(GL_MODELVIEW_MATRIX, mv_mat);
 	glGetFloatv(GL_PROJECTION_MATRIX, proj_mat);
 
-	glUniformMatrix4fv(modelviewMat_id, 1, false, mv_mat);
-	glUniformMatrix4fv(projMat_id, 1, false, proj_mat);
+	glUniformMatrix4fv(modelviewMat_id, 1, GL_FALSE, mv_mat);
+	glUniformMatrix4fv(projMat_id, 1, GL_FALSE, proj_mat);
 
 	glutSolidCube(2.0);
 
