@@ -83,7 +83,7 @@ void display(void)
 	glUseProgram(0);
 
 	glutSwapBuffers();
-	angle += 1.0f;
+	angle += (angle < 360.0f) ? (1.0f) : (-360.0f);
 }
 
 void reshape(int w, int h)

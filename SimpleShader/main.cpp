@@ -64,7 +64,7 @@ void display(void)
 	my_shader.unbind();
 
 	glutSwapBuffers();
-	angle += 0.1f;
+	angle += (angle < 360.0f) ? (1.0f) : (-360.0f);
 }
 
 void reshape(int w, int h)
