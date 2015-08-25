@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleShader", "SimpleShade
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PassingVariable", "PassingVariable\PassingVariable.vcxproj", "{9A1D5173-0BBB-4514-BDA4-AD2D12540407}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VertexAttribute", "VertexAttribute\VertexAttribute.vcxproj", "{7E74CFE1-D8A7-4FBC-B9E6-1159969AF0DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -21,6 +23,10 @@ Global
 		{9A1D5173-0BBB-4514-BDA4-AD2D12540407}.Debug|Win32.Build.0 = Debug|Win32
 		{9A1D5173-0BBB-4514-BDA4-AD2D12540407}.Release|Win32.ActiveCfg = Release|Win32
 		{9A1D5173-0BBB-4514-BDA4-AD2D12540407}.Release|Win32.Build.0 = Release|Win32
+		{7E74CFE1-D8A7-4FBC-B9E6-1159969AF0DF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7E74CFE1-D8A7-4FBC-B9E6-1159969AF0DF}.Debug|Win32.Build.0 = Debug|Win32
+		{7E74CFE1-D8A7-4FBC-B9E6-1159969AF0DF}.Release|Win32.ActiveCfg = Release|Win32
+		{7E74CFE1-D8A7-4FBC-B9E6-1159969AF0DF}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
