@@ -69,14 +69,14 @@ void display(void)
 
 	glRotatef(angle, 1.0, 1.0, 1.0);
 
-	GLuint modelviewMat_id = glGetUniformLocation(shader_program_id, "modelviewMat");
-	GLuint projMat_id = glGetUniformLocation(shader_program_id, "projMat");
+	GLuint modelviewMat_loc = glGetUniformLocation(shader_program_id, "modelviewMat");
+	GLuint projMat_loc = glGetUniformLocation(shader_program_id, "projMat");
 
 	glGetFloatv(GL_MODELVIEW_MATRIX, mv_mat);
 	glGetFloatv(GL_PROJECTION_MATRIX, proj_mat);
 
-	glUniformMatrix4fv(modelviewMat_id, 1, GL_FALSE, mv_mat);
-	glUniformMatrix4fv(projMat_id, 1, GL_FALSE, proj_mat);
+	glUniformMatrix4fv(modelviewMat_loc, 1, GL_FALSE, mv_mat);
+	glUniformMatrix4fv(projMat_loc, 1, GL_FALSE, proj_mat);
 
 	glutSolidCube(2.0);
 
