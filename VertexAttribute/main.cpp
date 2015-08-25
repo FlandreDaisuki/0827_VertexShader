@@ -12,10 +12,6 @@ GLuint shader_vp;
 GLuint shader_fp;
 GLuint shader_program_id;
 
-// For Passing
-GLfloat mv_mat[16];
-GLfloat proj_mat[16];
-
 float angle = 0.0;
 
 void init(void)
@@ -64,21 +60,27 @@ void display(void)
 	glLoadIdentity();
 
 	gluLookAt(0.0, 0.0, 5.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
-
+	
 	glUseProgram(shader_program_id);
 
-	glRotatef(angle, 1.0, 1.0, 1.0);
+	glBindAttribLocation(shader_program_id, 1, "offset");
 
 	GLuint angle_loc = glGetUniformLocation(shader_program_id, "angle");
-
-
 	glUniform1f(angle_loc, angle);
-	glutSolidCube(2.0);
+
+	glBegin(GL_TRIANGLES);
+		glVertexAttrib3f(1, 0.0, 1.0, 0.0);
+		glVertex3f(0.0, 1.0, 0.0);
+		glVertexAttrib3f(1, 1.0, 0.0, -1.0);
+		glVertex3f(1.0, 0.0, -1.0);
+		glVertexAttrib3f(1, 1.0, 0.0, -1.0);
+		glVertex3f(-1.0, 0.0, -1.0);
+	glEnd();
 
 	glUseProgram(0);
 
 	glutSwapBuffers();
-	angle += 1.0f;
+	angle += (angle < 360.0f) ? (1.0f) : (-360.0f);
 }
 
 void reshape(int w, int h)
