@@ -1,7 +1,6 @@
 # 0827_VertexShader
 
-Vertex Shader &amp; Lighting &amp; Transform Introduction
-in GLSL version 110 (OpenGL version 2.0)
+Vertex Shader &amp; Lighting &amp; Transform Introduction in GLSL version 1.1 (correspond to OpenGL version 2.0)
 
 ### Environment
 
@@ -10,7 +9,7 @@ in GLSL version 110 (OpenGL version 2.0)
 
 ### Installation
 
-install Git latest version and open git shell.
+if Git is installed
 
 type
 
@@ -21,3 +20,7 @@ or
 ```
 git clone https://github.com/FlandreDaisuki/0827_VertexShader.git
 ```
+
+else
+
+click *Download ZIP* button in right sidebar.
