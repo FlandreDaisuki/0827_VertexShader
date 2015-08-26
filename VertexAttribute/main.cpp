@@ -19,6 +19,9 @@ void init(void)
 
 	puts((char*)glGetString(GL_VERSION));
 	puts((char*)glGetString(GL_SHADING_LANGUAGE_VERSION));
+	int max_attr;
+	glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &max_attr);
+	printf_s("GL_MAX_VERTEX_ATTRIBS = %d\n", max_attr);
 
 	glEnable(GL_DEPTH_TEST);
 	glShadeModel(GL_SMOOTH);
@@ -49,6 +52,8 @@ void init(void)
 	glAttachShader(shader_program_id, shader_fp);
 	glAttachShader(shader_program_id, shader_vp);
 
+	glBindAttribLocation(shader_program_id, 1, "offset");
+
 	glLinkProgram(shader_program_id);
 	validateProgram(shader_program_id);
 }
@@ -63,8 +68,6 @@ void display(void)
 	
 	glUseProgram(shader_program_id);
 
-	glBindAttribLocation(shader_program_id, 1, "offset");
-
 	GLuint angle_loc = glGetUniformLocation(shader_program_id, "angle");
 	glUniform1f(angle_loc, angle);
 
@@ -72,9 +75,9 @@ void display(void)
 		glVertexAttrib3f(1, 0.0, 1.0, 0.0);
 		glVertex3f(0.0, 1.0, 0.0);
 		glVertexAttrib3f(1, 1.0, 0.0, -1.0);
-		glVertex3f(1.0, 0.0, -1.0);
-		glVertexAttrib3f(1, 1.0, 0.0, -1.0);
 		glVertex3f(-1.0, 0.0, -1.0);
+		glVertexAttrib3f(1, 1.0, 0.0, -1.0);
+		glVertex3f(1.0, 0.0, -1.0);
 	glEnd();
 
 	glUseProgram(0);
