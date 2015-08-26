@@ -1,6 +1,7 @@
 # 0827_VertexShader
 
 Vertex Shader &amp; Lighting &amp; Transform Introduction
+in GLSL version 110 (OpenGL version 2.0)
 
 ### Environment
 
