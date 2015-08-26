@@ -3,6 +3,8 @@
 uniform mat4 modelviewMat; // for Custumize 1
 uniform mat4 projMat; // for Custumize 1
 
+varying vec4 specialColor;
+
 void main() {
 
 	///////////
@@ -15,6 +17,8 @@ void main() {
 	} else {
 		gl_FrontColor = vec4(0.1, 0.9, 0.9, 1.0);
 	}
+
+	specialColor = vec4(0.5, 0.5, 0.5, 1.0); //gray
 
 	////////////////////////
 	// Position Transform //
